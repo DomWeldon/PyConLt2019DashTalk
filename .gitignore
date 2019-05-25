@@ -11,3 +11,10 @@ node_modules/
 .sass-cache
 css/reveal.min.css
 js/reveal.min.js
+
+
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
