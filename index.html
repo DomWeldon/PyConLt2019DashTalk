@@ -58,7 +58,7 @@
 							Looking for <span class="fragment highlight-current-green">feedback and questions</span> at the end!
 						</li>
 						<li class="fragment">
-							I'll give a <span class="fragment highlight-current-blue">URL for the slides at the end</span>, and on twitter.
+							I'll give a <span class="fragment highlight-current-blue">URL for the slides on github by the end of the day</span>, and on Twitter.
 						</li>
 						<li>
 							Github Link: <a href="https://github.com/DomWeldon/PyConLt2019DashExamples">https://github.com/DomWeldon/PyConLt2019DashExamples</a>
@@ -826,9 +826,10 @@ def _not_found() -> html.Div:
 $ python -m app06</code></pre>
 					</section>
 				</section>
+				<!-- Implement dependency injection? -->
 				<section>
 					<section>
-						<h2>6. Tooling up Dash: Dependency Injection</h2>
+						<h2>6. Tooling up Dash: Dependency Injection ⬇️</h2>
 					</section>
 					<section>
 						<p>
@@ -837,17 +838,128 @@ $ python -m app06</code></pre>
 						<p>
 							The first such tool we've begun to use is dependency injection, using <a href="https://github.com/google/pinject" target="_blank">google/pinject</a>.
 						</p>
+						<p>
+							If you're interested in implementing this, please contact me for the source code.
+						</p>
+					</section>
+					<section>
+						<h2>
+							Philosophy for chooding Dependency Injection
+						</h2>
+						<p>
+							Users can register a class or functon using the <span class="fragment highlight-current-blue">@App.service</span> decorator. Services can <span class="fragment highlight-current-blue">depend on oneanother in our object graph</span>.
+						</p>
+						<p>
+							Avoids the need for users to think about <span class="fragment highlight-current-blue">where to place files relative to oneanother</span>.
+						</p>
+						<p>
+							We can  <span class="fragment highlight-current-blue">re-use services internally</span>, incuding in <span class="fragment highlight-current-blue">bigger web applications that may emerge from work with dash</span>.
+						</p>
 					</section>
 				</section>
 
-				<!-- Implement dependency injection? -->
+				<!-- Summary: how is Dash useful? -->
+				<!-- When should I switch to using a proper react app? -->
+				<section>
+					<h2>
+						Which brings me to the final point...
+					</h2>
+					<p>
+						When to <span class="fragment highlight-current-red">stop using Dash</span> and start building a <span class="fragment highlight-current-red">"proper" web application?</span>
+					</p>
+				</section>
+				<section>
+					<h2>
+						Dash is great for...
+					</h2>
+					<ul>
+						<li>
+							Rapid UI development: <span class="fragment">we've built 5 interactive web apps in this workshop without writing a single line of JS</span>.
+						</li>
+						<li>
+							Informed UI development: <span class="fragment">data scientists don't have to hand over work to software engineers and can focus on building an app that fits their analysis</span>.
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2 class="fragment highlight-current-red">
+						But...
+					</h2>
+					<ul>
+						<li>
+							Rapid UI development: <span class="fragment">are you creating technical debt, if your app will be rebuilt from scratch in React should you not invest time in JS early on??</span>.
+						</li>
+						<li>
+							Informed UI development: <span class="fragment">informed by whom?</span> <span class="fragment">Dash tools are great, but obviously are limited.</span> <span class="fragment">Do you need a user researcher / UX consultant?</span>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Some things Dash isn't great at...</p>
+					<ul>
+						<li class="fragment">
+							Authentication (without using plotly accounts)
+						</li>
+						<li class="fragment">
+							Complex interactions where you may wish to incorporate components using complex third party havascript libraries and use redux.
+						</li>
+						<li class="fragment">
+							Heavy loads.Every keystroke causses a request to the server...
+						</li>
+					</ul>
+				</section>
+
+				<!-- Moral: Dash is great, but manage it well and incorporate it into your team with care -->
+				<section>
+					<h2 class="fragment highlight-current-red">
+						Summary...
+					</h2>
+					<ul>
+						<li>
+							Dash is a great tool for <span class="fragment highlight-current-green">facilitating rapid development of data-driven interfaces and dashboards</span>.
+						</li>
+						<li>
+							Investing a bit of time into <span class="fragment highlight-current-green">building tools into it and organizing your code can allow you to go very, very far</span> inside a dash app.
+						</li>
+						<li class="fragment">
+							Front end developers will still have a job: <span class="fragment highlight-current-green">Javascript is important on the web!</span>
+						</li>
+					</ul>
+				</section>
 
 				<!-- Testing?? -->
-
-				<!-- Summary: how is Dash useful? -->
-				<!-- Moral: Dash is great, but manage it well and incorporate it into your team with care -->
-				<!-- When should I switch to using a proper react app? -->
+				<section>
+					<h2>
+						Some areas we're working on for the future:
+					</h2>
+					<ul>
+						<li>
+							Testing: how to automate this in Dash?
+						</li>
+						<li>
+							Dash Dependency Injection: to be open sourced!
+						</li>
+						<li>
+							Open sourcing some of our custom Dash components: inclluding a port for Leaflet maps.
+						</li>
+					</ul>
+				</section>
 				<!-- Contact details -->
+				<section>
+					<h2>
+						Thanks for listening!
+					</h2>
+					<p>
+						Please contact me for more:
+					</p>
+					<p>
+						<a href="mailto:dom.weldon@decisionLab.co.uk">dom.weldon@decisionlab.co.uk</a>
+					</p>
+					<p>
+						<p><a href="https://twitter.com/DomWeldon" target="_blank">@DomWeldon</a></p>
+					</p>
+				</section>
 			</div>
 		</div>
 
