@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - checkout
-      - run: pip install awscli
+      - run: sudo pip install awscli
       - run: aws s3 sync ./js s3://domweldon-pyconlt-2019-dash/js
       - run: aws s3 sync ./css s3://domweldon-pyconlt-2019-dash/css
       - run: aws s3 sync ./plugin s3://domweldon-pyconlt-2019-dash/plugin
