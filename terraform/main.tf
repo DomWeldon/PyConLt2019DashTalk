@@ -24,10 +24,24 @@ EOF
   }
 }
 
+
+module "s3_user" {
+  source       = "git::https://github.com/cloudposse/terraform-aws-iam-s3-user.git?ref=master"
+  namespace    = "dom_talks"
+  stage        = "prod"
+  name         = "dom_talks"
+  s3_actions   = ["s3:*"]
+  s3_resources = ["arn:aws:s3:::${var.bucket_name}/*"]
+}
+
 output "aws_bucket_url" {
   value = "${aws_s3_bucket.slides.bucket_regional_domain_name}"
 }
 
-# output "aws_website_url" {
-#   value = "${aws_s3_bucket.slides.website_domain}"
-# }
+output "s3_user_access_key_id" {
+  value = "${module.s3_user.access_key_id}"
+}
+
+output "s3_user_access_key_secret" {
+  value = "${module.s3_user.secret_access_key}"
+}
