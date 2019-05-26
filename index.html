@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Talk Slides</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -45,7 +45,7 @@
 					</h4>
 					<ul>
 						<li>
-							<span class="fragment highlight-current-red">Very</span> basic introduction to dash and how to use it.
+							<span class="fragment highlight-current-red">Basic introduction</span> to dash and how to use it.
 						</li>
 						<li>
 							Discuss <span class="fragment highlight-current-green">what we've learned</span> at decisionLab from using Dash across teams
@@ -59,22 +59,6 @@
 						</li>
 						<li class="fragment">
 							I'll give a <span class="fragment highlight-current-blue">URL for the slides on github by the end of the day</span>, and on Twitter.
-						</li>
-						<li>
-							Github Link: <a href="https://github.com/DomWeldon/PyConLt2019DashExamples">https://github.com/DomWeldon/PyConLt2019DashExamples</a>
-						</li>
-					</ul>
-				</section>
-				<section>
-					<h2>
-						Today's aims:
-					</h2>
-					<ul>
-						<li>
-							If you’re a data scientist: <span class="fragment highlight-current-blue">here’s a cool tool and some thoughts on how to use it</span>.
-						</li>
-						<li>
-							If you’re a software engineer: here’s <span class="fragment highlight-current-blue">how to manage web apps built with dash and support data scientists in your team
 						</li>
 						<li>
 							Github Link: <a href="https://github.com/DomWeldon/PyConLt2019DashExamples">https://github.com/DomWeldon/PyConLt2019DashExamples</a>
@@ -101,7 +85,7 @@
 					<h1 class="fragment">
 						Why am I here?
 					</h1>
-					<p class="fragment">How did I come to <span class="fragment highlight-current-red">use dash but not be an expert</span> in it?</p>
+					<p class="fragment">How did I come to <span class="fragment highlight-current-red">use dash as a Full Stack Developer</span>?</p>
 				</section>
 				<section>
 					<section>
@@ -109,10 +93,17 @@
 						<p class="fragment">Mathematical modelling consultancy <span class="fragment highlight-current-red">based in central London</span>.</p>
 					</section>
 					<section>
-						<img src="/img/theresa-may.jpg" alt="Sorry" style="height: 400px;" />
+						<img src="/img/Brexit-Mess.jpg" alt="Sorry" style="height: 400px;" />
 						<h2 class="fragment">
 							Sorry <span class="fragment">🇪🇺</span>
 						</h2>
+					</section>
+					<section>
+						<h2>Invite</h2>
+						<h3>PyCon 🇬🇧 2019</h2>
+						<p>Friday 13 - Tuesday 17 September</p>
+						<p> in Cardiff 🏴󠁧󠁢󠁷󠁬󠁳󠁿</p>
+						<p><a href="https://2019.pyconuk.org/">https://2019.pyconuk.org/</a></p>
 					</section>
 				</section>
 				<section>
@@ -161,7 +152,7 @@
 						Their <span class="fragment highlight-current-blue">background probably isn't in web development<span>.
 					</p>
 					<p class="fragment">
-						Mine is, I want to facilitate their work and deploy the tools we build.
+						I want to <span class="fragment highlight-current-blue">facilitate their work and deploy</span> the tools we build.
 					</p>
 				</section>
 				<section>
@@ -197,16 +188,41 @@
 						Sometimes.
 					</p>
 				</section>
+				<section>
+					<h2>
+						Aims for rest of the session:
+					</h2>
+					<ul>
+						<li>
+							If you’re a data scientist: <span class="fragment highlight-current-blue">here’s a cool tool and some thoughts on how to use it</span>.
+						</li>
+						<li>
+							If you’re a software engineer: here’s <span class="fragment highlight-current-blue">how to manage web apps built with dash and support data scientists in your team
+						</li>
+						<li>
+							Github Link: <a href="https://github.com/DomWeldon/PyConLt2019DashExamples">https://github.com/DomWeldon/PyConLt2019DashExamples</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>
+						You can produce very interesting and functional applications in Dash
+					</h2>
+					<p>
+						A <span class="fragment highlight-current-blue">user interface for a machine learning tool</span> used to detect <span class="fragment highlight-current-blue">criminal activity in the Amazon rainforest</span>.
+					</p>
+				</section>
+
 				<section data-background-image="/img/midas-ml.png" data-background-size="contain">
 				</section>
 
 				<!-- S2 -->
 				<section>
 					<h2>
-						So how does it work?
+						So how does Dash it work?
 					</h2>
 					<ul>
-						<li>
+						<li class="fragment highlight-current-green">
 							Github Link: <a href="https://github.com/DomWeldon/PyConLt2019DashExamples">https://github.com/DomWeldon/PyConLt2019DashExamples</a>
 						</li>
 					</ul>
@@ -290,7 +306,7 @@ from dash.dependencies import Input, Output
 					</section>
 
 					<section>
-						<p>Give the heading an ID</p>
+						<p>Give the heading an ID, <span class="fragment highlight-current-green">my-h1</span></p>
 						<pre><code data-trim-no-escape>
 app.layout = html.Div(
     children=[
@@ -305,7 +321,7 @@ app.layout = html.Div(
 </code></pre>
 					</section>
 					<section>
-						<p>Set its value with a Callback: taking the value of my-input</p>
+						<p>Set its value with a <span class="fragment highlight-current-blue">Callback</span>: taking the <span class="fragment highlight-current-blue">value of my-input</span></p>
 						<pre><code class="small_code">
 @app.callback(
     Output(
@@ -343,6 +359,9 @@ $ python app01.py
 </code></pre>
 				</section>
 				<section>
+					<h2>
+						Important:
+					</h2>
 					<p>
 						In a <span class="fragment highlight-current-green">React app, this would all be managed inside the browser</span>.
 						With <span class="fragment highlight-current-red">Dash it now involves a call to the server</span> (to get the new value for the DIV)
@@ -352,15 +371,15 @@ $ python app01.py
 					<h2 class="fragment highlight-current-green">But that's okay...</h2>
 					<p class="fragment">
 						I want to <span class="fragment highlight-current-blue">build an app really quickly</span>.
-						With <span class="fragment highlight-current-blue">minimal new technologies for my data scientist<span>.
+						With <span class="fragment highlight-current-blue">minimal new technologies for my data scientist</span>.
 						In order to <span class="fragment highlight-current-blue">build a proof-of-concept (PoC), or a very low-use alpha</span>.
 					</p>
 				</section>
 				<section>
-					<h2>
+					<h2 class="fragment">
 						...right?
 					</h2>
-					<p>
+					<p class="fragment">
 						Some other potential problems...
 					</p>
 				</section>
@@ -435,14 +454,17 @@ def provide_passengers(sex: str) -> Iterable[Mapping]:
 						<h3>
 							This might seem <span class="fragment highlight-current-red">obvious</span>
 						</h3>
-						<p class="fragment">But it does still cause problems in rapid development.</p>
+						<p class="fragment">
+							But in <span class="fragment highlight-current-blue">teams with different backgrounds, different things are obvious</span> to different people.
+							These errors tend to be a little more subtle than the errors demonstrated above.
+						</p>
 						<p class="fragment">
 							<a href="https://dash.plot.ly/sharing-data-between-callbacks" target="_blank">Read more here</a>
 						</p>
 						<p class="fragment">Dash has none of the support or tools for multiple apps like Flask contexts etc.</p>
 					</section>
 					<section>
-						<h2>app03.py: listing the 🛳️ dataset properly</h2>
+						<h2>app03.py: listing the 🛳️ dataset <span class="fragment highlight-current-green">properly</sooan></h2>
 					</section>
 					<section>
 						<pre><code class="small_code">
@@ -467,7 +489,7 @@ def provide_passengers(sex: str) -> Iterable[Mapping]:
 				</section>
 				<section>
 					<h3>
-						Dash brings a lot of React concepts into Python
+						Dash brings a lot of <span class="fragment highlight-current-green">React concepts into Python</span>
 					</h3>
 					<p class="fragment highlight-current-blue">
 						Input/Output loosely equivalent to props and render().
@@ -629,21 +651,22 @@ def add_task(
 					</section>
 					<section>
 						<h3>File Structures: app05.py</h3>
+						<p class="fragment highlight-current-blue">Separation of concerns</p>
 						<ul>
 							<li>
 								__init__.py
 							</li>
 							<li>
-								__main__.py - runs the app
+								<span class="fragment highlight-current-blue">__main__.py</span> - runs the app (as module)
 							</li>
 							<li>
-								app.py - calls dash.Dash()
+								<span class="fragment highlight-current-blue">app.py</span> - calls dash.Dash() to construct the app
 							</li>
 							<li>
-								callbacks.py - handles interactions
+								<span class="fragment highlight-current-blue">callbacks.py</span> - handles interactions
 							</li>
 							<li>
-								layouts.py - defines the look of the app
+								<span class="fragment highlight-current-blue">layouts.py</span> - defines the look of the app
 							</li>
 						</ul>
 					</section>
@@ -658,7 +681,7 @@ def add_task(
 				<section>
 					<section>
 						<h2>
-							2. Stop storing your data in files! ⬇️
+							2. <span class="fragment highlight-current-red">Stop</span> storing your data in files! ⬇️
 						</2>
 					</section>
 						<section>
@@ -667,7 +690,6 @@ def add_task(
 		df.to_csv("results.csv")
 		</pre></code>
 						</section>
-
 						<section>
 							<p>Oh wait hang on...</p>
 							<pre><code>
@@ -702,11 +724,11 @@ def add_task(
 				<section>
 					<section>
 						<h2 class="fragment">
-							3. Build your app with factory functions
+							3. Build your app with <span class="fragment highlight-current-blue">factory functions</span>
 						</h2>
 						<p class="fragment">...because...</p>
 						<h2 class="fragment">
-							4. This allows easier routing and navigation! ⬇️
+							4. This allows easier <span class="fragment highlight-current-blue">routing and navigation!</span> ⬇️
 						</h2>
 					</section>
 					<section>
@@ -715,7 +737,7 @@ def add_task(
 								At decisionLab, we've <span class="fragment highlight-current-blue">abstracted the Dash interface</span> from our callbacks and layouts.
 							</li>
 							<li>
-								Our App class has a <span class="fragment highlight-current-blue">callback decorator which stores callnacls as they are declared<span>.
+								Our App class has a <span class="fragment highlight-current-blue">callback decorator which stores callbacks as they are declared<span>.
 							</li>
 							<li>
 								And a <span class="fragment highlight-current-blue">layout decorator which stores layout (i.e., dash components) alongside a route (a string for the URL path).<span>.
@@ -837,22 +859,22 @@ $ python -m app06</code></pre>
 				<!-- Implement dependency injection? -->
 				<section>
 					<section>
-						<h2>6. Tooling up Dash: Dependency Injection ⬇️</h2>
+						<h2>5. Tooling up Dash: Dependency Injection ⬇️</h2>
 					</section>
 					<section>
 						<p>
-							Once we have a class to declare and manage the app, and factory functions to build it, we can start to integrate other tools to make life for our users easier.
+							Once we have a <span class="fragment highlight-current-blue">class to declare and manage the app</span>, and <span class="fragment highlight-current-blue">factory functions to build it</span>, we can start to <span class="fragment highlight-current-blue">integrate other tools to make life for our users easier</span>.
 						</p>
 						<p>
-							The first such tool we've begun to use is dependency injection, using <a href="https://github.com/google/pinject" target="_blank">google/pinject</a>.
+							The first such tool we've begun to use is <span class="fragment highlight-current-blue">dependency injection</span>, using <a href="https://github.com/google/pinject" target="_blank">google/pinject</a>.
 						</p>
 						<p>
-							If you're interested in implementing this, please contact me for the source code.
+							If you're interested in implementing this, please <span class="fragment highlight-current-blue">contact me for the source code</span>.
 						</p>
 					</section>
 					<section>
 						<h2>
-							Philosophy for chooding Dependency Injection
+							Philosophy for <span class="fragment highlight-current-blue">choosing Dependency Injection</span>
 						</h2>
 						<p>
 							Users can register a class or functon using the <span class="fragment highlight-current-blue">@App.service</span> decorator. Services can <span class="fragment highlight-current-blue">depend on oneanother in our object graph</span>.
@@ -895,7 +917,7 @@ $ python -m app06</code></pre>
 					</h2>
 					<ul>
 						<li>
-							Rapid UI development: <span class="fragment">are you creating technical debt, if your app will be rebuilt from scratch in React should you not invest time in JS early on??</span>.
+							Rapid UI development: <span class="fragment">are you creating technical debt, if your app will be rebuilt from scratch in React should you not invest time in JS early on?</span>.
 						</li>
 						<li>
 							Informed UI development: <span class="fragment">informed by whom?</span> <span class="fragment">Dash tools are great, but obviously are limited.</span> <span class="fragment">Do you need a user researcher / UX consultant?</span>
@@ -907,13 +929,13 @@ $ python -m app06</code></pre>
 					<p>Some things Dash isn't great at...</p>
 					<ul>
 						<li class="fragment">
-							Authentication (without using plotly accounts)
+							Authentication (<span class="fragment highlight-current-red">without</span> using plotly accounts)
 						</li>
 						<li class="fragment">
-							Complex interactions where you may wish to incorporate components using complex third party havascript libraries and use redux.
+							Complex interactions where you may wish to incorporate components using <span class="fragment highlight-current-red">complex third party Javascript libraries and use redux</span>.
 						</li>
 						<li class="fragment">
-							Heavy loads.Every keystroke causses a request to the server...
+							Heavy loads. <span class="fragment highlight-current-red">Every keystroke causses a request to the server...</span>
 						</li>
 					</ul>
 				</section>
@@ -942,13 +964,13 @@ $ python -m app06</code></pre>
 						Some areas we're working on for the future:
 					</h2>
 					<ul>
-						<li>
+						<li class="fragment">
 							Testing: how to automate this in Dash?
 						</li>
-						<li>
-							Dash Dependency Injection: to be open sourced!
+						<li class="fragment">
+							Dash Tooling and Dependency Injection: to be open sourced!
 						</li>
-						<li>
+						<li class="fragment">
 							Open sourcing some of our custom Dash components: inclluding a port for Leaflet maps.
 						</li>
 					</ul>
