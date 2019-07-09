@@ -20,5 +20,6 @@ __pycache__/
 *$py.class
 
 .terraform/
-*.tfstate
-*tfstate.backup
+
+./*.tfstate
+./*.tfstate.backup
