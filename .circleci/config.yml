@@ -8,6 +8,7 @@ jobs:
 
     steps:
       - checkout
+      - run: echo "$CIRCLE_BRANCH/$CIRCLE_SHA1" > version.txt
       - run: sudo pip install awscli
       - run: aws s3 sync ./js s3://domweldon-pyconlt-2019-dash/js
       - run: aws s3 sync ./css s3://domweldon-pyconlt-2019-dash/css
